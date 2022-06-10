@@ -97,7 +97,7 @@ class Automation():
         pane1.send_keys(self.spdk_work_dir+'/build/examples/accel_perf '+self.command)
         time.sleep(3)
         if self.dsa:
-            pane2.send_keys(self.spdk_work_dir+'/scripts/rpc.py idxd_scan_accel_engine -c 0')
+            pane2.send_keys(self.spdk_work_dir+'/scripts/rpc.py dsa_scan_accel_engine ')
             pane2.send_keys(self.spdk_work_dir+'/scripts/rpc.py framework_start_init')
         if self.emon:
             pane3.send_keys('timeout 40 python2 emon.py -w '+str(self.dir)+"/"+self.emon_dir)
